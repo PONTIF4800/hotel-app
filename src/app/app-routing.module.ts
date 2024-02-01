@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path:"" , component: HomeComponent},
   {path:"list", component: ReservationListComponent},
-  {path:"form", component: ReservationFormComponent}
+  {path:"new", component: ReservationFormComponent}
 ];
 
 @NgModule({

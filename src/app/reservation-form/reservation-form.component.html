@@ -1,1 +1,44 @@
-<p>reservation-form works!</p>
+<div class="card mt-5">
+    <h3> Reservation Form </h3>
+    <form [formGroup]="reservationForm"  (ngSubmit)="onSubmit()">
+    <div>
+        <p>check in date</p>
+        <input type="date" formControlName="checkInDate">
+        <label *ngIf="reservationForm.get('checkInDate')?.invalid && reservationForm.get('checkInDate')?.touched">
+            check in date field is mandatory.
+        </label>
+    </div> 
+    <div>   
+        <p>check out date</p>
+        <input type="date" formControlName="checkOutDate">
+        <label *ngIf="reservationForm.get('checkOutDate')?.invalid && reservationForm.get('checkOutDate')?.touched">
+            check out date is mandatory field.
+        </label>
+    </div> 
+    <div>   
+        <p>gust name</p>
+        <input type="text" formControlName="guestName">
+        <label *ngIf="reservationForm.get('guestName')?.invalid && reservationForm.get('guestName')?.touched">
+            gust name is mandatory field.
+        </label>
+    </div> 
+    <div>   
+        <p>gust email</p>
+        <input type="email" formControlName="guestEmail">
+        <label *ngIf="reservationForm.get('guestEmail')?.invalid && reservationForm.get('guestEmail')?.touched">
+            Email is mandatory field.
+        </label>
+    </div> 
+    <div>   
+        <p>room number</p>
+        <input type="number" formControlName="roomNumber">
+        <label *ngIf="reservationForm.get('roomNumber')?.invalid && reservationForm.get('roomNumber')?.touched">
+            room number is mandatory field.
+        </label>
+    </div> 
+
+
+    <button type="submit" [disabled]="reservationForm.invalid">submit</button>
+
+</form>
+</div>

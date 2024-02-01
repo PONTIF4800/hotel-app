@@ -1,0 +1,12 @@
+.card{
+    background: #4cdfc762;
+    padding: 20px;
+     width: 40%;
+     max-width: 1000px;
+     min-width: 200px;
+     text-align: center;
+     font-family: Arial;
+     margin: 0 auto; /* Added */
+     float: none; /* Added */
+     margin-bottom: 10px; /* Added */
+   }
